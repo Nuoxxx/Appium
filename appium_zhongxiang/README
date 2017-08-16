@@ -1,2 +1,3 @@
 1、众享APP在Genymotion上运行会崩溃；
 2、发布活动功能暂时未实现自动化；
+3、查看活动详情页缺少WebView.setWebContentsDebuggingEnabled(true),暂时无法实现详情页webview自动化; 
