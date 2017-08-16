@@ -19,7 +19,7 @@ class AndroidNativeTests(unittest.TestCase):
     def setUp(self):
         app = os.path.abspath(
                 os.path.join(os.path.dirname(__file__),
-                             '/apps/selendroid-test-app.apk'))
+                             '../apps/selendroid-test-app.apk'))
         desired_caps = {
             'app': app,
             'appPackage': 'io.selendroid.testapp',
