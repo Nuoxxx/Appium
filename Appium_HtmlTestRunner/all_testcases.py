@@ -2,9 +2,9 @@ import sys,time,os
 import smtplib
 import unittest
 #由于模块和当前文件不在一个目录下，将模块添加到程序中
-sys.path.append('\test_cases')
-from test_cases import android_native
-from test_cases import android_webview
+# sys.path.append('\Appium_HtmlTestRunner')
+from Appium_Learn.Appium_HtmlTestRunner.test_cases import android_native
+from Appium_Learn.Appium_HtmlTestRunner.test_cases import android_webview
 
 import HTMLTestRunner
 
@@ -18,7 +18,7 @@ suite.addTests(unittest.makeSuite(android_webview.AndroidWebViewTests))
 
 now = time.strftime("%Y-%m-%d_%H_%M_%S",time.localtime())
 
-filename = "D:\\Selenium_project\\report\\"+now+"_result.html"
+filename = os.path.abspath(os.path.join(os.path.abspath(__file__),'../report/'+now+"result.html"))
 fp = open(filename,'wb')
 runner = HTMLTestRunner.HTMLTestRunner(stream=fp,title='selenium_app_test',description=u'测试')
 runner.run(suite)
