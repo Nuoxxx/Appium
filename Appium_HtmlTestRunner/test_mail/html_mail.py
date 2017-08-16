@@ -19,6 +19,7 @@ subject = "python email test"
 smtpserver = 'smtp.qq.com'
 #发送邮箱用户/密码
 username = '1308476239@qq.com'
+#获取的不是明文密码，是授权码
 password = 'cdqpkznhstvmjejc'
 
 content = '<html><h1>你好！</h1></html>'
